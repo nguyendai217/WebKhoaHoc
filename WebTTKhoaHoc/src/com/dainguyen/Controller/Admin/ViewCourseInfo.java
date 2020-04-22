@@ -2,7 +2,6 @@ package com.dainguyen.Controller.Admin;
 
 import java.io.IOException;
 import java.sql.Connection;
-import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,16 +11,17 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.dainguyen.DAO.Type_of_NewsDAO;
+import com.dainguyen.DAO.Admin.AdminCourseDAO;
 import com.dainguyen.DBConnection.DBConnection;
-import com.dainguyen.Model.Type_of_news;
+import com.dainguyen.Model.Course;
 
-@WebServlet("/AddNews")
-public class AddNews extends HttpServlet {
+@WebServlet("/ViewCourseInfo")
+public class ViewCourseInfo extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public AddNews() {
+	public ViewCourseInfo() {
 		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -31,21 +31,24 @@ public class AddNews extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// Khởi tạo đối tượng Session
+		HttpSession session = request.getSession(false);
+		// Lấy ra username đăng nhập vào
+		String usname = (String) session.getAttribute("username");
 
-		HttpSession session = request.getSession();
-		String username = (String) session.getAttribute("username");
-		if (username==null) {
+		if (usname == null) {
 			response.sendRedirect("login");
-		}
-		else {
-			Connection conn= DBConnection.CreateConnection();
-			List<Type_of_news> type_of_news= Type_of_NewsDAO.LoadTypeNews(conn);
-			request.setAttribute("listTypeofNews", type_of_news);
-			RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/admin/admin_addnews.jsp");
-			rd.forward(request, response);
-			
-		}
+		} else {
+			Connection conn = DBConnection.CreateConnection();
 
+			String courseID = request.getParameter("courseID");
+			Course c = new Course();
+			c = AdminCourseDAO.LoadCourseInfo(courseID, conn);
+			request.setAttribute("courseInfo", c);
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/admin/admin_course_info.jsp");
+			rd.forward(request, response);
+		}
+		
 	}
 
 }

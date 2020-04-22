@@ -55,5 +55,35 @@ public class AdminEditCourse {
 		}
 		return t;
 	}
+	
+	
+	public static boolean UpdateCourse(Course course, Connection conn) {
+		String sql = "update course set  coursename=?, description=?, info=?, fee=?, topic_id=? where course_id='"+course.getCourse_id()+"';";
+		
+			try {
+			
+			PreparedStatement ptmt = conn.prepareStatement(sql);
+			
+			ptmt.setString(1, course.getCoursename());
+			ptmt.setString(2, course.getDescription());
+			ptmt.setString(3, course.getInfo());
+			ptmt.setDouble(4, course.getFee());
+			ptmt.setInt(5, course.getTopic_id());
+			
+			int kt = ptmt.executeUpdate();
+
+			if(kt!=0){
+				
+				return true;
+			}
+			ptmt.close();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("Error :"+e.getMessage());
+		}
+
+		return false;
+	}
 
 }

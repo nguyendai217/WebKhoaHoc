@@ -32,8 +32,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli:400,300' rel='stylesheet' type='text/css'>
     <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <script type="text/javascript" src="js/pager.js"></script>
-    <script type="text/javascript" src="js/myadmin.js"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -67,7 +65,7 @@
                 </li>
                 <li>
                     <a href="AdminAccount">
-                        <i class="fa fa-users"></i>
+                        <i class="ti-face-smile"></i>
                         <p>Quản lí tài khoản</p>
                     </a>
                 </li>
@@ -108,105 +106,84 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="logout">Đăng xuất</a></li>
+                                
                               </ul>
                         </li>
                     </ul>
+
                 </div>
             </div>
         </nav>
+        
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
                     	<div class="row">
-                    		<div class="btn-group" style="float: left; padding-bottom: 15px;padding-left: 17px;">
-                                <form action="searchNews" method="post">
-                                    <input style="float: left; width: 75%" class="form-control border-input" type="text" name="search" placeholder="Search">
-                                    <button type="submit" style="float: right; margin-top: 2px;" class="btn btn-default"><i class="ti-search"></i></button>
-                                </form>
-                            </div>
-                            
-                            <div class="btn-group" style="margin-left: 10px; float: right; padding-right: 20px;">
-                            	<button type="submit" form="form1" class="btn btn-default" onclick="return getConfirmation();"><span class="ti-trash"></span>&nbsp;&nbsp;Xóa</button>
-                    		</div>
-                    		<div class="btn-group" style="float: right; padding-bottom: 15px;padding-right: 5px;">
-                                <a href="AddNews" type="button" class="btn btn-default">
-                                  <i class="ti-plus"></i>&nbsp;&nbsp;Thêm mới
+                    		<div class="btn-group" style=" padding-bottom: 15px;padding-left: 20px;">
+                                <a href="AdminNews" type="button" class="btn btn-default">
+                                  <i class="ti-arrow-left"></i>&nbsp;&nbsp;back
                                 </a>
                             </div>
                     	</div>
-                    	<div class="card">
+                        <div class="card">
                             <div class="header" style="float: left;">
-                                <h4 class="title">Danh sách tin tức</h4>
+                                <h4 class="title">Thêm tin tức</h4>
                                 <p class="category"></p>
-                            </div>
-                            <div class="btn-group" style="float: right;width: 320px; padding-top: 13px;padding-right: 17px;padding-bottom: 13px;">
-                                <form action="loadBasedonTypeofnews" method="post">
-                                	<input type="hidden" id="type" value="${type}">
-                                    <select style="float: left; width: 72%" id="typeID" name="typeID" class="form-control border-input">
-                                        <option class="dropdown" value="0">Tất cả</option>
-                                        <c:forEach items="${listTypeofNews}" var="listTypeofNews">
-                                        	<option class="dropdown" value="${listTypeofNews.type_id}">${listTypeofNews.typename}</option>
-                                        </c:forEach>
-                                    </select>
-                                    <button type="submit" style="float: right; margin-top: 2px;" class="btn btn-default">&nbsp;&nbsp;Lọc</button>
-                                </form>
                                 
                             </div>
+                            
                             <div class="clearfix"></div>
-                            <form action="DeleteNews" id="form1" method="post" onsubmit="return checkCheckBoxesNews(this)">
-	                            <div class="content table-responsive table-full-width">
-	                                <table id="tablepaging" class="table table-striped">
-	                                    <thead>
-	                                    	<th>&nbsp;</th>
-	                                    	<th>Hình ảnh</th>
-	                                        <th>Tiêu đề</th>
-	                                        <th>Nội dung</th>
-	                                        <th>Ngày đăng</th>
-	                                        <th>Chi tiết</th>
-	                                    </thead>
-	                                    <tbody>
-	                                    	<c:forEach items="${listNews}" var="listNews">
-	                                    		<tr>
-	                                    			<td>
-	                                    				<div class="checkbox icheck-primary">
-	                                    				<input type="checkbox" name="newsDel[]" value="${listNews.news_id}"/>
-	                                    				</div>
-	                                    			</td>
-	                                    			<td>
-	                                    				<div >
-	                                                        <span class="avatar">
-	                                                            <img src="${listNews.image}" height="60" width="90">
-	                                                        </span>
-		                                                </div>
-	                                    			</td>
-		                                            <td>${listNews.title}</td>
-		                                            <td>${listNews.content_news}</td>
-		                                            <td>${listNews.date}</td>
-		                                            
-		                                            <td><a href="ViewNewsInfo?newsID=${listNews.news_id}" 
-		                                            style="font-size: 16px; color: black; padding-left: 30px;" class="ti-pencil-alt"></a></td>
-	                                        	</tr>
-	                                    	</c:forEach>
-	                                    </tbody>
-	                                </table> 
-	                                
-	                                <div id="pageNavPosition" style="padding-top: 20px" align="center"></div>
-	                        	</div>
-                        	</form>
-                    	</div>
-                	</div>
-            	</div>
-        	</div>
+                            <div class="content">
+                                 <form action="AddNewsInfo" method="post">
+                                 	<input type="hidden" name="account_id" value="${adminID}">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Thể loại</label>
+                                                <select id="ListType" name="ListType" class="form-control border-input">
+                                                <c:forEach items="${listTypeofNews}" var="listTypeofNews">
+                                                    <option class="dropdown" value="${listTypeofNews.type_id}">${listTypeofNews.typename}</option>
+			                                    </c:forEach>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Tiêu đề</label>
+                                                <textarea rows="2" class="form-control border-input" name="title" placeholder="Title"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Nội dung</label>
+                                                <textarea rows="7" class="form-control border-input" name="content" placeholder="Content"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Add News</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-		<input type="hidden" id="message" value="${message}">
-		<footer class="footer">
+        <footer class="footer">
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
+
                         <li>
-                            <a href="AdminViewProfile">
+                            <a href="viewProfileAdmin">
                             	ITCENTER
                             </a>
                         </li>
@@ -220,33 +197,26 @@
 
     </div>
 </div>
-<script type="text/javascript">
-	var pager = new Pager('tablepaging', 5);
-	pager.init();
-	pager.showPageNav('pager', 'pageNavPosition');
-	pager.showPage(1);
-</script>
-<script type="text/javascript">
-(function () {
-	var kk = document.getElementById('message').value; //lấy thông báo
-    if(kk != ""){
-        alert(kk);
-    }
-})();
-</script>
 </body>
 	<!--   Core JS Files   -->
     <script src="assets/js/jquery-1.10.2.js" type="text/javascript"></script>
 	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
+
 	<!--  Charts Plugin -->
 	<script src="assets/js/chartist.min.js"></script>
+
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 	<script src="assets/js/paper-dashboard.js"></script>
+
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-	 <script type="text/javascript" src="js/myadmin.js"></script>
 </html>
