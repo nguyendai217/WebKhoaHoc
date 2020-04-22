@@ -1,0 +1,33 @@
+.dropdown .dropdown-toggle .img_avatar{
+	border-radius: 50%;
+    display: inline-block;
+    height: 20px;
+    width: 22px;
+    margin-top: -7px;
+    margin-left: -10px;
+}
+.dropdown .btn_account{
+	margin-top: -1px;
+}
+#menu li button{
+  width: auto !important;
+  background-color: white;
+  padding-bottom: 0px;
+  margin-top: -9px;
+}
+#menu ul li{
+	width: 120px;
+}
+#menu ul li ul li{
+	float: left;
+	border-right: none;
+	width: 100%;
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+#menu ul li ul{
+	margin-top: 0px;
+}
+
+

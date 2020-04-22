@@ -1,0 +1,90 @@
+.header-page {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 1px;
+	background: url(../images/khoahoc/tieude/KH3.jpg) fixed;
+	background-size: cover;
+	height: 300px;
+	width: 100%;
+}
+::selection {
+	background: rgb(240, 236, 241);
+	color: black;
+}
+.header-content {
+	width: 80%;
+	margin: auto;
+}
+.new-breadcrumb {
+	padding-top: 100px;
+	position: absolute;
+	top: 320px;
+}
+.header-page a{
+	color: black;
+}
+.header-page h1{
+	margin-top: 160px;
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+}
+.header-page h4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: black;
+}
+
+/*Content*/
+.title_course{
+	padding-top: 30px;
+	padding-left: 10px;
+	padding-bottom: 150px;
+}
+.title_course .hometext{
+  text-align: left;
+  padding-top: 0px;
+  padding-left: 60px;
+}
+#khoahoc_info .entry-content{
+	padding-top: 10px;
+}
+#khoahoc_info .course_imggg{
+	width: 100%;
+	padding-left: 10px;
+	margin-left: -10px;
+	margin-right: -10px;
+}
+#khoahoc_info .course_imggg img{
+	padding-left: 20px;
+}
+#khoahoc_info .content_inf p{
+	color: #777;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+/*lịch khai giảng*/
+.schedule .title_sche{
+	padding-bottom: 30px;
+}
+#sche_table .sche_header{
+	cursor: pointer;
+}
+#khoahoc_info .schedule{
+	margin-top: 50px;
+	padding: 20px;
+	background-color: rgba(234, 239, 243, 0.41);
+}
+#khoahoc_info .table{
+	text-align: center;
+}
+#sche_table th{
+	text-align: center;
+}
+@media (max-width: 992px){
+	.body{
+		padding: 10px;
+		margin-left: -56px;
+		font-size: 13px;
+	}
+}

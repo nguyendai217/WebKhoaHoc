@@ -1,0 +1,201 @@
+
+/*-- gallery --*/ 
+.gallery-agileinfo {
+    margin-top: 4em;
+}
+.gallery-agileinfo .figcaption h4 {
+    color: #fff;
+    font-size:2.5em;
+    text-align: center;
+}
+.gallery-agileinfo p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.baner-bottom img,.baner-top img{
+	width:100%;
+ }
+.gallery-agileinfo figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+.gallery-agileinfo figure img {
+	position: relative;
+	display: block;
+	width:100%;
+}
+.gallery-w3bottom {
+    margin: 2.5em 0;
+}
+.gallery-agileinfo figure .figcaption {
+	padding: 2em;
+	color: #fff;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+} 
+.gallery-agileinfo figure .figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+figure.effect-bubba {
+    background: #000;
+}
+figure.effect-bubba:hover img {
+	opacity: 0.3;
+}
+figure.effect-bubba .figcaption::before,
+figure.effect-bubba .figcaption::after {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	bottom: 30px;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.35s,-webkit-transform 0.35s;	
+	-moz-transition: opacity 0.35s, -moz-transform 0.35s;
+	-o-transition: opacity 0.35s, -o-transform 0.35s;
+	-ms-transition: opacity 0.35s, -ms-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-bubba .figcaption::before {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	-webkit-transform: scale(0,1);
+	-moz-transform: scale(0,1); 
+	-o-transform: scale(0,1);
+	-ms-transform: scale(0,1);
+	transform: scale(0,1);
+}
+figure.effect-bubba .figcaption::after {
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	-webkit-transform: scale(1,0);
+	-moz-transform: scale(1,0);
+	-o-transform: scale(1,0);
+	-ms-transform: scale(1,0);
+	transform: scale(1,0);
+}
+figure.effect-bubba h4 {
+	padding-top:22%;
+	-webkit-transition: transform 0.35s;
+	-moz-transition: transform 0.35s;
+	-o-transition: -o-transform 0.35s;
+	-ms-transition: -ms-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,-20px,0);
+	-moz-transform: translate3d(0,-20px,0);
+	-o-transform: translate3d(0,-20px,0);
+	-ms-transform: translate3d(0,-20px,0);
+	transform: translate3d(0,-20px,0);
+	opacity:0;
+} 
+figure.effect-bubba p {
+	padding: 12px 2.5em;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	-moz-transition: opacity 0.35s, -moz-transform 0.35s;
+	-o-transition: opacity 0.35s, -o-transform 0.35s;
+	-ms-transition: opacity 0.35s, -ms-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	-moz-transform: translate3d(0,20px,0);
+	-o-transform: translate3d(0,20px,0);
+	-ms-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+figure.effect-bubba:hover .figcaption::before,
+figure.effect-bubba:hover .figcaption::after {
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+} 
+figure.effect-bubba:hover h4,
+figure.effect-bubba:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-o-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+@media screen and (max-width: 1080px){
+	figure.effect-bubba h4 {
+		padding-top: 16%;
+	}
+	
+}
+
+
+
+@media screen and (max-width: 991px){
+	.gallery-agileinfo figure .figcaption {
+		padding: 1em; 
+	}
+	figure.effect-bubba .figcaption::before, figure.effect-bubba .figcaption::after { 
+		top: 15px;
+		right: 15px;
+		bottom: 15px;
+		left: 15px; 
+	}
+	.gallery-agileinfo .figcaption h4 { 
+		font-size: 2em; 
+	} 
+	figure.effect-bubba p {
+		padding: .8em 1em; 
+	}
+	.gallery-w3lstop,.gallery-w3bottom {
+		padding: 0 .5em;
+	}
+	.gallery-w3bottom {
+		margin: 1em 0;
+	}
+}
+	
+@media screen and (max-width: 667px){
+	.gallery-agileinfo .figcaption h4 {
+		font-size: 1.6em;
+	}
+	figure.effect-bubba h4 {
+		padding-top: 15%;
+	}
+	figure.effect-bubba p {
+		padding: .8em 0.5em;
+	}
+}
+	
+
+@media screen and (max-width: 568px){
+	figure.effect-bubba h4 {
+		padding-top: 12%;
+	}
+}
+@media screen and (max-width: 480px){
+	
+	.gallery-w3lstop, .gallery-w3bottom {
+		padding: .5em;
+		width: 100%;
+	}
+	.gallery-w3bottom {
+		margin: 0; 
+	}
+	.gallery-agileinfo {
+		margin-top: 2em;
+	}
+	
+	figure.effect-bubba h4 {
+		padding-top: 13%;
+	}
+}

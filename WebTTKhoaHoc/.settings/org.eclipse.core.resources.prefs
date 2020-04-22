@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF/views/admin/admin_course.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/footer.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/header.jsp=UTF-8
+encoding//WebContent/WEB-INF/views/trangchu.jsp=UTF-8
+encoding//WebContent/css/mycssHome.css=UTF-8
+encoding//WebContent/css/mycssHome1.css=UTF-8
+encoding//WebContent/css/style1.css=UTF-8
+encoding//src/com/dainguyen/Controller/TrangChuController.java=UTF-8
+encoding/<project>=UTF-8
+separateDerivedEncodings=true

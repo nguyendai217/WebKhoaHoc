@@ -1,0 +1,140 @@
+/*1*/
+
+.header-page {
+	font-family: 'Open Sans', sans-serif;
+	padding-top: 1px;
+	background: url(../images/khoahoc/tieude/KH3.jpg) fixed;
+	background-size: cover;
+	height: 353px;
+	width: 100%;
+}
+::selection {
+	background: rgb(240, 236, 241);
+	color: black;
+}
+.header-content {
+	width: 80%;
+	margin: auto;
+}
+.new-breadcrumb {
+	position: absolute;
+	top: 320px;
+}
+h1,h2{
+	font-family: 'Open Sans', sans-serif;
+}
+h3,h4{
+	font-family: 'Open Sans', sans-serif;
+}
+p{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: rgb(105, 100, 100);
+}
+.panel-body a:hover{
+	color: black;
+}
+.panel-body a{
+	color: white;
+}
+.breadcrumb {
+	list-style: none;
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, 0.52);
+	border: 1px solid black;
+}
+.breadcrumb>.active {
+	color: #736d6d;
+}
+.breadcrumb>li+li:before{
+	color: black;
+}
+/*2*/
+.body-page {
+	padding-top: 150px;
+	position: relative;
+}
+.panel-default>.panel-heading {
+	background-color: black;
+	color: white;
+}
+.k{
+	background-color: rgb(156, 157, 159);
+}
+.pull-left{
+	float: left!important;
+}
+.filter{
+	padding-top: 19px;
+	padding-right: 50px;	
+	float: right;
+}
+#homeCourse img {
+  -webkit-transition-duration: 0.5s; /*Webkit: Animation duration*/
+  -moz-transition-duration: 0.5s; /*Mozilla duration version*/
+  -o-transition-duration: 0.5s; /*Opera duration version*/
+  margin: 0 10px 5px 0; /*margin between images*/
+
+  }
+#homeCourse img:hover{
+  -webkit-transform:scale(1.1); /*Webkit: Scale up image to 1.2x original size*/
+  -moz-transform:scale(1.1); /*Mozilla scale version*/
+  -o-transform:scale(0.1); /*Opera scale version*/
+  -webkit-transition-duration: 500ms;
+
+}
+.btn-Group{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+.searchWrapper{
+	padding-left: 50px;
+	
+}
+.coursesWrapper{
+	
+}
+.divider{
+	border-top: 1px solid black;
+	margin-right: 50px;
+}
+
+.cardWrapper{
+	
+}
+.pageCourse{
+	padding-left: 6%;
+	margin-bottom: 100px;
+}
+.itemCard{
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 25px;
+	padding-bottom: 30px;
+}
+.couseText{
+	color: rgb(105, 100, 100);
+	font-family: 'Open Sans', sans-serif;
+}
+.pagination>.active>a{
+	color: black;
+	background-color: #e04622;
+	border-color: #e04622;
+}
+.infoBot{
+	padding-top: 30px;
+}
+.header-page a{
+	color: black;
+}
+.header-page h1{
+	margin-top: 160px;
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+}
+.header-page h4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: black;
+}
