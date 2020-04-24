@@ -105,7 +105,7 @@
                         <div class="col-md-12">
                             <div class="row">
                                 <div class="btn-group" style="float: left; padding-bottom: 15px; padding-left: 17px;">
-                                    <form action="searchCourse" method="post">
+                                    <form action="SearchCourse" method="post">
                                         <input style="float: left; width: 75%" class="form-control border-input" type="text" name="search" placeholder="Search">
                                         <button type="submit" style="float: right; margin-top: 2px;" class="btn btn-default">
                                             <i class="ti-search"></i>

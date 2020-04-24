@@ -15,7 +15,6 @@
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
 
-
     <!-- Bootstrap core CSS     -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -43,7 +42,6 @@
                     ITCENTER
                 </a>
             </div>
-
             <ul class="nav">
                 <li>
                     <a href="AdminViewProfile">
@@ -106,11 +104,9 @@
                               </a>
                               <ul class="dropdown-menu">
                                 <li><a href="logout">Đăng xuất</a></li>
-                                
                               </ul>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -130,9 +126,7 @@
                             <div class="header" style="float: left;">
                                 <h4 class="title">Thêm khóa học</h4>
                                 <p class="category"></p>
-                                
                             </div>
-                            
                             <div class="clearfix"></div>
                             <div class="content">
                                  <form action="AddCourseInfo" method="post">
@@ -183,10 +177,9 @@
                                     </div>
                                     
                                     <div>
-                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Add</button>
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Add Course</button>
                                     </div>
                                     <div class="clearfix"></div>
-
                                 </form>
                             </div>
                         </div>
@@ -198,7 +191,6 @@
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
-
                         <li>
                             <a href="AdminViewProfile">
                             	ITCENTER
@@ -222,14 +214,8 @@
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
 
-	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
-
-    <!--  Notifications Plugin    -->
+    <!--  Notifications Plugin  -->
     <script src="assets/js/bootstrap-notify.js"></script>
-
-    <!--  Google Maps Plugin    -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
     <!-- Paper Dashboard Core javascript and methods for Demo purpose -->
 	<script src="assets/js/paper-dashboard.js"></script>

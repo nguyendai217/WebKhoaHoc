@@ -44,10 +44,6 @@
 </script> 
 </head>
 <body>
-	
-	<!--
-			==============================Hearder====================================
-	-->
 	<div class="container">
 		<div class="topbar">
 			<div id="menu">
@@ -109,8 +105,7 @@
 								</ul>
 							</li>
 							<li >
-								<a href="News">TIN TỨC</a>
-								
+								<a href="News">TIN TỨC</a>								
 							</li> 
 							<li><a href="Contact">LIÊN HỆ</a></li>
 							<li class="dropdown">
@@ -121,8 +116,7 @@
 									</li>
 								</ul>
 							</li>
-						</ul>
-						
+						</ul>	
 					</div>
 				</div><!--end container-->
 			</nav><!--end nav-->
@@ -155,7 +149,7 @@
 			<div class="col-md-9 Info_Content_text">
 				<!-- Tab panes -->
 				<div class="tab-content vertical-content ">
-		<!-- THÔNG TIN CÁ NHÂN -->
+				<!-- THÔNG TIN CÁ NHÂN -->
 				    <div role="tabpanel" class="tab-pane fade active in Info_Content_text1" id="home-Vertical">
 				    <form class="form-horizontal" id="form_validation" method="POST" novalidate="novalidate" action="UploadAvatar?IDupload=<%=acc.getAccount_id() %>" enctype="multipart/form-data">
 				        <div class="row">
@@ -204,7 +198,7 @@
 						</div>
 						</form>
 				    </div>
-		<!-- THAY ĐỔI THÔNG TIN -->
+					<!-- THAY ĐỔI THÔNG TIN -->
 				    <div role="tabpanel" class="tab-pane fade Info_Content_text2" id="profile-Vertical">
 				        <div class="card-inner">
 					        <h4 class="tieude_text1">CHỈNH SỬA THÔNG TIN CÁ NHÂN</h4>
@@ -338,9 +332,7 @@
 			</div>
 		</div>
 	</div>
-	<!--
-	==========================Footer================
-	-->
+
 	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

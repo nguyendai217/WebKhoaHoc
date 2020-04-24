@@ -17,16 +17,10 @@ import com.dainguyen.DBConnection.DBConnection;
 import com.dainguyen.Model.Course;
 import com.dainguyen.Model.Topic;
 
-/**
- * Servlet implementation class CourseController
- */
 @WebServlet("/Course")
 public class CourseController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	/**
-	 * @see HttpServlet#HttpServlet()
-	 */
 	public CourseController() {
 		super();
 		// TODO Auto-generated constructor stub

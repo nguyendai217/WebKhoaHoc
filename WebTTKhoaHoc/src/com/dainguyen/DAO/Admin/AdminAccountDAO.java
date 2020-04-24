@@ -63,7 +63,8 @@ public class AdminAccountDAO {
 	public static User LoadAccountInfo(String accountID, Connection conn) {
 		User user = new User();
 		String sql = null;
-		sql = "SELECT * FROM account" + " WHERE account_id = '" + accountID + "'";
+		sql = "SELECT account_id, accountname, password, name, birthday, sex, mail, phonenumber, avatar, rolename"
+				+ " FROM account join role on account.role_id = role.role_id  WHERE account_id = '" + accountID + "'";
 		try {
 			PreparedStatement ptmt = conn.prepareStatement(sql);
 
@@ -78,8 +79,8 @@ public class AdminAccountDAO {
 				String mail = rs.getString("mail");
 				String phonenumber = rs.getString("phonenumber");
 				String avatar = rs.getString("avatar");
-				int role_id = rs.getInt("role_id");
-				//String rolename= rs.getString("rolename");
+				//int role_id = rs.getInt("role_id");
+				String rolename= rs.getString("rolename");
 
 				user.setAccount_id(account_id);
 				user.setAccountname(accountname);
@@ -89,8 +90,8 @@ public class AdminAccountDAO {
 				user.setMail(mail);
 				user.setPhonenumber(phonenumber);
 				user.setAvatar(avatar);
-				user.setRole_id(role_id);
-				//user.setRolename(rolename);
+				//user.setRole_id(role_id);
+				user.setRolename(rolename);
 			}
 
 		} catch (SQLException e) {

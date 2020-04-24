@@ -123,8 +123,7 @@
                     <div class="col-lg-3 col-md-4">
                         <div class="card card-user">
                             <div class="image">
-                                <img src="assets/img/background.jpg" alt="..."/>
-                                
+                                <img src="assets/img/background.jpg" alt=""/>
                             </div>
                             <div class="content">
                                 <div class="author">
@@ -142,18 +141,20 @@
                                 <h4 class="title">Thông tin tài khoản</h4>
                             </div>
                             <div class="content">
-                                <form action="updateRoleAccount" method="post">
+                                <form action="UpdateAccount" method="post">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Tên tài khoản</label>
                                                 <input type="hidden" name="accountID" value="${usInfo.account_id}">
-                                                <input type="text" name="username" class="form-control border-input" placeholder="Username" value="${usInfo.accountname}" readonly>
+                                                <input type="text" name="username" class="form-control border-input" placeholder="Username" value="${usInfo.accountname}">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group">
+                                            	<label>Role</label>
                                                 <input type="hidden" id="role" value="${usInfo.rolename}">
+                                                <input type="text" name="role" class="form-control border-input" disabled="disabled" placeholder="Role" value="${usInfo.rolename}">
                                             </div>
                                         </div>
                                     </div>
@@ -161,7 +162,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Tên người dùng</label>
-                                                <input type="text" name="name" class="form-control border-input" placeholder="Name" value="${usInfo.name}" readonly>
+                                                <input type="text" name="name" class="form-control border-input" placeholder="Name" value="${usInfo.name}"  required>
                                             </div>
                                         </div>
                                     </div>
@@ -170,7 +171,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Ngày sinh</label>
-                                                <input type="text" name="birthday" class="form-control border-input" disabled placeholder="Birthday" value="${usInfo.birthday}" required>
+                                                <input type="text" name="birthday" class="form-control border-input"  placeholder="Birthday" value="${usInfo.birthday}" required >
                                             </div>
                                         </div>
                                     </div>
@@ -179,7 +180,10 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Giới tính</label>
-                                                <input type="text" name="phonenumber" class="form-control border-input" disabled placeholder="Gender" value="${usInfo.sex}" required>
+                                                <select id="listsex" name="listsex" class="form-control border-input">
+                                                     <option class="dropdown" value="Nam">Nam</option>
+                                                     <option class="dropdown" value="Nữ">Nữ</option>
+                                                 </select>
                                             </div>
                                         </div>
                                     </div>
@@ -187,7 +191,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Email</label>
-                                                <input type="text" name="mail" class="form-control border-input" disabled placeholder="Email" value="${usInfo.mail}" required>
+                                                <input type="text" name="mail" class="form-control border-input"  placeholder="Email" value="${usInfo.mail}" required>
                                             </div>
                                         </div>
                                     </div>
@@ -195,9 +199,12 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label>Số điện thoại</label>
-                                                <input type="text" name="phonenumber" class="form-control border-input" disabled placeholder="Phone number" value="${usInfo.phonenumber}" required>
+                                                <input type="text" name="phonenumber" class="form-control border-input"  placeholder="Phone number" value="${usInfo.phonenumber}" required>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" class="btn btn-info btn-fill btn-wd">Update</button>
                                     </div>
                                     <div class="clearfix"></div>
 
@@ -237,9 +244,6 @@
 
 	<!--  Checkbox, Radio & Switch Plugins -->
 	<script src="assets/js/bootstrap-checkbox-radio.js"></script>
-
-	<!--  Charts Plugin -->
-	<script src="assets/js/chartist.min.js"></script>
 
     <!--  Notifications Plugin    -->
     <script src="assets/js/bootstrap-notify.js"></script>

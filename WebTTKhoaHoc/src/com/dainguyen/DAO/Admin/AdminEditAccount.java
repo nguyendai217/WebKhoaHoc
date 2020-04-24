@@ -12,7 +12,7 @@ public class AdminEditAccount {
 	// edit account
 	// update account
 
-	public static boolean InsertAccount(User r, Connection conn) {
+	public static boolean InsertAccount(User user, Connection conn) {
 		String sql = "INSERT INTO account (accountname, password, name, birthday, sex, mail, phonenumber, role_id)"
 				+ " VALUES (?, ?, ?, ?, ?, ?, ?, ?); ";
 
@@ -20,14 +20,14 @@ public class AdminEditAccount {
 
 			PreparedStatement ptmt = conn.prepareStatement(sql);
 
-			ptmt.setString(1, r.getAccountname());
-			ptmt.setString(2, r.getPassword());
-			ptmt.setString(3, r.getName());
-			ptmt.setString(4, r.getBirthday());
-			ptmt.setString(5, r.getSex());
-			ptmt.setString(6, r.getMail());
-			ptmt.setString(7, r.getPhonenumber());
-			ptmt.setInt(8, r.getRole_id());
+			ptmt.setString(1, user.getAccountname());
+			ptmt.setString(2, user.getPassword());
+			ptmt.setString(3, user.getName());
+			ptmt.setString(4, user.getBirthday());
+			ptmt.setString(5, user.getSex());
+			ptmt.setString(6, user.getMail());
+			ptmt.setString(7, user.getPhonenumber());
+			ptmt.setInt(8, user.getRole_id());
 
 			int kt = ptmt.executeUpdate();
 

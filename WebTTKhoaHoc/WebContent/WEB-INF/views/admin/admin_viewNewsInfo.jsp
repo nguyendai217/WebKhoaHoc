@@ -140,8 +140,7 @@
                             <div class="header" style="float: left;">
                                 <h4 class="title">Thông tin tin tức</h4>
                                 <p class="category"></p>
-                            </div>
-                            
+                            </div>                           
                             <div class="clearfix"></div>
                             <div class="content">
                                  <form action="UpdateNews" method="post">
@@ -197,17 +196,13 @@
                                         <button type="submit" class="btn btn-info btn-fill btn-wd">Update</button>
                                     </div>
                                     <div class="clearfix"></div>
-
                                 </form>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
-        </div>
-        
+        </div> 
         <!-- Modal đổi ảnh -->
         <div class="modal fade" id="changeImage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="padding-top: 100px;">
             <form action="UploadImageNews?IDupload=${newsInfo.news_id}" method="post" enctype="multipart/form-data">
@@ -236,7 +231,6 @@
             <div class="container-fluid">
                 <nav class="pull-left">
                     <ul>
-
                         <li>
                             <a href="viewProfileAdmin">
                             	ITCENTER
@@ -270,7 +264,6 @@
     if(k != ""){
         alert(k);
     }  
-    
 })();
 </script>
 <script>
@@ -305,5 +298,4 @@
 
 	<!-- Paper Dashboard DEMO methods, don't include it in your project! -->
 	<script src="assets/js/demo.js"></script>
-	
 </html>
