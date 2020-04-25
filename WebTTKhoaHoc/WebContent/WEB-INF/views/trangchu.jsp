@@ -328,14 +328,14 @@
 							<span class="day">${day }</span> <span class="month">${month }</span>
 						</div>
 						<div class="caption hometext">
-							<a href="News_Info?news_id=${list_news.news_id}"
+							<a href="NewsInfo?news_id=${list_news.news_id}"
 								class="non-textdecoration" target="_blank">
 								<h4>${list_news.title }</h4>
 							</a>
 						</div>
 						<p style="font-size:15px; color: #7c7c86; padding-top:5px;float:right">
 							${content }...</p>
-						<a class="readmore" href="News_Info?news_id=${list_news.news_id }">read
+						<a class="readmore" href="NewsInfo?news_id=${list_news.news_id }">read
 							more <i class="fa fa-angle-right"></i>
 						</a>
 					</div>

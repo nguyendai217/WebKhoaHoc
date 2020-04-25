@@ -11,7 +11,6 @@ import com.dainguyen.Model.Class;
 
 public class ClassDAO {
 
-	/*Lấy lớp sắp khai giảng theo course_id*/
 	public static List<Class> getClassbyCourseID(Connection conn, int StrCourse_id){
 		
 		List<Class> list= new ArrayList<Class>();
@@ -25,6 +24,7 @@ public class ClassDAO {
 			ResultSet rs= ptmt.executeQuery();
 			
 			while(rs.next()){
+				
 				Class class_list= new Class();
 				
 				class_list.setClass_id(rs.getInt("class_id"));

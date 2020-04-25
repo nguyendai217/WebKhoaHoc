@@ -23,7 +23,6 @@ public class TestLogin {
 		pstm.setString(2, Pass);
 		ResultSet rs = pstm.executeQuery();
 
-		// Kiểm tra user và pass
 		if (rs.next()) {
 
 			Integer account_id = rs.getInt("account_id");
@@ -61,7 +60,6 @@ public class TestLogin {
 		pstm.setString(1, Name);
 		ResultSet rs = pstm.executeQuery();
 
-		// Kiểm tra user và pass
 		if (rs.next()) {
 
 			Integer account_id = rs.getInt("account_id");
